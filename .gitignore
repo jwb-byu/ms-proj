@@ -9,12 +9,16 @@ tmp/*
 __pycache__
 
 **/*.aux
-**/_minted*
+**/*.bbl
+**/*.bcf
+**/*.blg
 **/*.fdb_latexmk
 **/*.fls
-**/*.log
 **/*.gz
+**/*.log
 **/*.out
+**/*.run.xml
+**/_minted*
 
 # specific files
 proposal.pdf
