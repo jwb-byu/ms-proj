@@ -1,0 +1,20 @@
+tmp.*
+tmp/*
+
+*.egg-info/*
+.vscode/*
+.venv
+.mypy_cache
+
+__pycache__
+
+**/*.aux
+**/_minted*
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.gz
+**/*.out
+
+# specific files
+proposal.pdf
