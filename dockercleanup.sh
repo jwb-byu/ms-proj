@@ -5,7 +5,7 @@
 # Function to ensure the user confirms the cleanup
 confirm() {
     read -p "This will remove all Docker containers, images, volumes, and networks. Are you sure? (y/n): " choice
-    case "$choice" in 
+    case "$choice" in
         y|Y ) echo "Proceeding with cleanup...";;
         n|N ) echo "Aborting."; exit 0;;
         * ) echo "Invalid input. Please enter y or n."; confirm;;
