@@ -1,13 +1,15 @@
+# temporary files
 tmp.*
 tmp/*
 
-*.egg-info/*
+# environment
+*.egg-info
 .vscode/*
 .venv
 .mypy_cache
-
 __pycache__
 
+# latex
 **/*.aux
 **/*.bbl
 **/*.bcf

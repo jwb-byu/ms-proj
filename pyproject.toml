@@ -1,0 +1,32 @@
+# This file is adapted from similar files used in my prior academic and industry work. Those files and this file may have been developed with the help of LLM's like ChatGPT
+
+[build-system]
+requires = ["setuptools>=69.5.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwb-byu-ms-proj"
+description = "Wesley Borden Masters Project"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=3.7",
+    "pytest>=8.3",
+    "mypy>=1.15",
+    "ruff>=0.10"
+]
+
+[tool.mypy]
+python_version = "3.13"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
