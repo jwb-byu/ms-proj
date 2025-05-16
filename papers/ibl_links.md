@@ -38,6 +38,10 @@
 - Pub: https://doi.org/10.6084/m9.figshare.19705522.v4
 - Repo: https://github.com/int-brain-lab/ibl-sorter
 
+### Reproducible Spike Sorting
+- Pub: https://elifesciences.org/reviewed-preprints/100840v1
+- Repo: https://github.com/int-brain-lab/paper-reproducible-ephys/
+
 ### NEDS/Scaled Decoding
 - Pub: https://arxiv.org/abs/2504.08201
 - Site: https://ibl-neds.github.io/
