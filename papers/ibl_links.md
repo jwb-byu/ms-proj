@@ -1,18 +1,18 @@
-### Environment (Deprecated?)
+### Environment - Not necessary if ONE-api is installed: 2025-05-16
 - Docs: https://int-brain-lab.github.io/iblenv/
 - Repo: https://github.com/int-brain-lab/iblenv
 
-### Low-level Access/Tools - Goal: 2025-05-15
+### Low-level Access/Tools - Done: 2025-05-16
 - PyPi: https://pypi.org/project/ibllib/
 - Docs: https://int-brain-lab.github.io/iblenv/
 - Repo: https://github.com/int-brain-lab/ibllib
 
-### High-level Access - Goal: 2025-05-15
+### High-level Access - Done: 2025-05-16
 - PyPi: https://pypi.org/project/ONE-api/
 - Docs: https://int-brain-lab.github.io/ONE/
 - Repo: https://github.com/int-brain-lab/ONE
 
-### Database
+### Database - Handled by ONE: 2025-05-16
 - Docs: https://alyx.readthedocs.io/en/latest/
 - Docs: https://openalyx.internationalbrainlab.org/docs/
 - Repo: https://github.com/cortex-lab/alyx
@@ -46,3 +46,29 @@
 - Pub: https://arxiv.org/abs/2504.08201
 - Site: https://ibl-neds.github.io/
 - Repo: https://github.com/yzhang511/NEDS/
+
+### Spikeinterface
+- Pub: https://elifesciences.org/articles/61834
+- Docs: https://spikeinterface.readthedocs.io/en/stable/
+- Repo: https://github.com/SpikeInterface/spikeinterface
+
+### Probeinterface
+- Pub: https://elifesciences.org/articles/61834
+- Docs: https://probeinterface.readthedocs.io/en/main/
+- Repo: https://github.com/SpikeInterface/probeinterface
+
+### SlidingRefractory
+- Repo: https://github.com/SteinmetzLab/slidingRefractory
+
+### Dartsort
+- Pub: https://www.biorxiv.org/content/10.1101/2023.08.11.553023v1
+- Repo: https://github.com/cwindolf/dartsort
+
+### Dredge
+- Pub: https://www.nature.com/articles/s41592-025-02614-5
+- Repo: https://github.com/evarol/dredge
+
+### Neo
+- Docs: https://neo.readthedocs.io/en/latest/
+- Docs: https://neuralensemble.org/neo/
+- Repo: https://github.com/NeuralEnsemble/python-neo
