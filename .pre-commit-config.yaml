@@ -1,4 +1,5 @@
-# This file is adapted from similar files used in my prior academic and industry work. Those files and this file may have been developed with the help of LLM's like ChatGPT
+# This file is adapted from similar files used in my prior academic and industry work.
+# Those files and this file may have been developed with the help of LLM's like ChatGPT
 
 repos:
   # Basic pre-commit hooks
