@@ -17,17 +17,17 @@
 - Docs: https://openalyx.internationalbrainlab.org/docs/
 - Repo: https://github.com/cortex-lab/alyx
 
-### Brain-Wide Map Tools - 2025-05-20
+### Brain-Wide Map Tools - Done - 2025-05-20
 - Pub: https://www.biorxiv.org/content/10.1101/2023.07.04.547681v4
 - Repo: https://github.com/int-brain-lab/paper-brain-wide-map
 
-### Viewer - not maintained - 2025-05-20
+### Viewer - not maintained - Done - 2025-05-20
 - Repo: https://github.com/int-brain-lab/iblviewer
 
-### Neurodata Without Borders - intro 2025-05-20
+### Neurodata Without Borders - Done - 2025-05-20
 - Repo: https://nwb-overview.readthedocs.io/en/latest/
 
-### E-Phys Compression
+### E-Phys Compression - Done - 2025-05-20
 - Repo: https://github.com/int-brain-lab/mtscomp
 
 ### Status Quo Spike Sorting (Pykilosort)
