@@ -7,24 +7,24 @@
 - Docs: https://int-brain-lab.github.io/iblenv/
 - Repo: https://github.com/int-brain-lab/ibllib
 
-### High-level Access - Done: 2025-05-16
+### High-level Access - Done - 2025-05-16
 - PyPi: https://pypi.org/project/ONE-api/
 - Docs: https://int-brain-lab.github.io/ONE/
 - Repo: https://github.com/int-brain-lab/ONE
 
-### Database - Handled by ONE: 2025-05-16
+### Database - Handled by ONE - 2025-05-16
 - Docs: https://alyx.readthedocs.io/en/latest/
 - Docs: https://openalyx.internationalbrainlab.org/docs/
 - Repo: https://github.com/cortex-lab/alyx
 
-### Brain-Wide Map Tools
+### Brain-Wide Map Tools - 2025-05-20
 - Pub: https://www.biorxiv.org/content/10.1101/2023.07.04.547681v4
 - Repo: https://github.com/int-brain-lab/paper-brain-wide-map
 
-### Viewer
+### Viewer - not maintained - 2025-05-20
 - Repo: https://github.com/int-brain-lab/iblviewer
 
-### Neurodata Without Borders
+### Neurodata Without Borders - intro 2025-05-20
 - Repo: https://nwb-overview.readthedocs.io/en/latest/
 
 ### E-Phys Compression
