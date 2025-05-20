@@ -12,6 +12,7 @@ pip install --editable '.[dev]'
 # dependency trees that may cause conflicts, so we're handling their dependencies ourselves
 # (see `pyproject.toml`).
 
+# pip install --no-deps git+https://github.com/int-brain-lab/iblenv.git # the IBL environment is not necessary for this project because we handle dependencies ourselves.
 pip install --no-deps git+https://github.com/MouseLand/Kilosort.git@main
 pip install --no-deps git+https://github.com/NeuralEnsemble/python-neo.git
 pip install --no-deps git+https://github.com/SpikeInterface/probeinterface.git
@@ -34,4 +35,3 @@ pip install --no-deps git+https://github.com/int-brain-lab/paper-brain-wide-map.
 pip install --no-deps git+https://github.com/int-brain-lab/paper-reproducible-ephys.git
 pip install --no-deps git+https://github.com/int-brain-lab/viewephys.git
 pip install --no-deps git+https://github.com/jwb-byu/NEDS.git@jwb-byu/setup-for-pip
-# pip install --no-deps git+https://github.com/int-brain-lab/iblenv.git
