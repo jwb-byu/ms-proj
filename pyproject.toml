@@ -12,10 +12,12 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "accelerate",
+    "aiohttp",
     "boto3",
     "click",
     "colorcet",
     "colorlog",
+    "dandi",
     "dask",
     "datasets",
     "easyqc",
@@ -52,6 +54,7 @@ dependencies = [
     "pyqt-darktheme",
     "pyqtgraph",
     "pynrrd",
+    "pynwb",
     "pyyaml",
     "qtpy",
     "quantities",
