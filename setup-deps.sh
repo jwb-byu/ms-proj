@@ -31,7 +31,7 @@ pip install --no-deps git+https://github.com/int-brain-lab/iblqt.git
 pip install --no-deps git+https://github.com/int-brain-lab/ibllib.git
 pip install --no-deps git+https://github.com/int-brain-lab/iblutil.git
 pip install --no-deps git+https://github.com/int-brain-lab/mtscomp.git
-pip install --no-deps git+https://github.com/int-brain-lab/paper-brain-wide-map.git
 pip install --no-deps git+https://github.com/int-brain-lab/paper-reproducible-ephys.git
 pip install --no-deps git+https://github.com/int-brain-lab/viewephys.git
 pip install --no-deps git+https://github.com/jwb-byu/NEDS.git@jwb-byu/setup-for-pip
+pip install --no-deps git+https://github.com/jwb-byu/paper-brain-wide-map.git@jwb-byu/refactoring-imbizo
