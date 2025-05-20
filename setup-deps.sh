@@ -19,6 +19,7 @@ pip install --no-deps git+https://github.com/SpikeInterface/probeinterface.git
 pip install --no-deps git+https://github.com/SpikeInterface/spikeinterface.git
 pip install --no-deps git+https://github.com/SteinmetzLab/slidingRefractory.git
 pip install --no-deps git+https://github.com/cortex-lab/phylib.git
+pip install --no-deps git+https://github.com/cortex-lab/psychofit.git
 pip install --no-deps git+https://github.com/cwindolf/dartsort.git
 pip install --no-deps git+https://github.com/evarol/dredge.git
 pip install --no-deps git+https://github.com/int-brain-lab/ONE.git
