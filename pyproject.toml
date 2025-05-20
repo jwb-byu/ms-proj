@@ -67,6 +67,7 @@ dependencies = [
     "sparse",
     "statsmodels",
     "svgutils",
+    "tabulate",
     "threadpoolctl",
     "timm",
     "toolz",
