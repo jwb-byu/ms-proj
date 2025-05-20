@@ -4,9 +4,10 @@ tmp/*
 
 # environment
 *.egg-info
+.mypy_cache
+.ruff_cache
 .vscode/*
 .venv
-.mypy_cache
 __pycache__
 
 # latex
