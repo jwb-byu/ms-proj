@@ -105,3 +105,6 @@ testpaths = ["tests"]
 
 [tool.ruff]
 target-version = "py313"
+
+[tool.setuptools]
+packages = ["sortrep"]
