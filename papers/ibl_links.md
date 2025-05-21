@@ -30,6 +30,10 @@
 ### E-Phys Compression - Done - 2025-05-20
 - Repo: https://github.com/int-brain-lab/mtscomp
 
+### SpikeGLX
+- Docs: https://billkarsh.github.io/SpikeGLX/
+- Repo: https://github.com/billkarsh/SpikeGLX
+
 ### Status Quo Spike Sorting (Pykilosort)
 - Pub: https://pmc.ncbi.nlm.nih.gov/articles/PMC11093732/
 - Repo: https://github.com/MouseLand/Kilosort
