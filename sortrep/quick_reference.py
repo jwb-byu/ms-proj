@@ -36,6 +36,7 @@
 # raw_ephys_data_collection_name = 'raw_ephys_data'
 # x = one.load_dataset(eid, dataset='foo.bar') # load data
 
+
 """SessionLoader"""
 # sess_loader = SessionLoader(one=one, eid=eid) # instatiate a session loader
 # sess_loader.load_trials() # Load in trials data
@@ -46,6 +47,7 @@
 # sess_loader.load_session_data() # do all of the above
 # sess_loader.trials # access trials
 # sess_loader.wheel # access another table, etc.
+
 
 """SpikeSortingLoader"""
 # spike_loader = SpikeSortingLoader(pid=pid, one=one)  # instantiate with a pid
