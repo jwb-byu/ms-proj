@@ -30,49 +30,49 @@
 ### E-Phys Compression - Done - 2025-05-20
 - Repo: https://github.com/int-brain-lab/mtscomp
 
-### SpikeGLX
+### SpikeGLX - Done - 2025-05-29
 - Docs: https://billkarsh.github.io/SpikeGLX/
 - Repo: https://github.com/billkarsh/SpikeGLX
 
-### Status Quo Spike Sorting (Pykilosort)
+### Status Quo Spike Sorting (Pykilosort) - Done - 2025-05-29
 - Pub: https://pmc.ncbi.nlm.nih.gov/articles/PMC11093732/
 - Repo: https://github.com/MouseLand/Kilosort
 
-### IBL Spike Sorting
+### IBL Spike Sorting - Done - 2025-05-29
 - Pub: https://doi.org/10.6084/m9.figshare.19705522.v4
 - Repo: https://github.com/int-brain-lab/ibl-sorter
 
-### Reproducible Spike Sorting
+### Reproducible Spike Sorting - Done - 2025-05-29
 - Pub: https://elifesciences.org/reviewed-preprints/100840v1
 - Repo: https://github.com/int-brain-lab/paper-reproducible-ephys/
 
-### NEDS/Scaled Decoding
+### NEDS/Scaled Decoding - Done - 2025-05-29
 - Pub: https://arxiv.org/abs/2504.08201
 - Site: https://ibl-neds.github.io/
 - Repo: https://github.com/yzhang511/NEDS/
 
-### Spikeinterface
+### Spikeinterface - Done - 2025-05-29
 - Pub: https://elifesciences.org/articles/61834
 - Docs: https://spikeinterface.readthedocs.io/en/stable/
 - Repo: https://github.com/SpikeInterface/spikeinterface
 
-### Probeinterface
+### Probeinterface - Done - 2025-05-29
 - Pub: https://elifesciences.org/articles/61834
 - Docs: https://probeinterface.readthedocs.io/en/main/
 - Repo: https://github.com/SpikeInterface/probeinterface
 
-### SlidingRefractory
+### SlidingRefractory - Done - 2025-05-29
 - Repo: https://github.com/SteinmetzLab/slidingRefractory
 
-### Dartsort
+### Dartsort - Done - 2025-05-29
 - Pub: https://www.biorxiv.org/content/10.1101/2023.08.11.553023v1
 - Repo: https://github.com/cwindolf/dartsort
 
-### Dredge
+### Dredge - Done - 2025-05-29
 - Pub: https://www.nature.com/articles/s41592-025-02614-5
 - Repo: https://github.com/evarol/dredge
 
-### Neo
+### Neo - Done - 2025-05-29
 - Docs: https://neo.readthedocs.io/en/latest/
 - Docs: https://neuralensemble.org/neo/
 - Repo: https://github.com/NeuralEnsemble/python-neo
