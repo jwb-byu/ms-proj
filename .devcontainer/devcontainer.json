@@ -27,7 +27,7 @@
 			]
 		}
 	},
-	"postCreateCommand": "pip install --editable '.[dev]'",
+	"postCreateCommand": "./setup-deps.sh",
 	"forwardPorts": [],
 	"remoteUser": "root"
 }
