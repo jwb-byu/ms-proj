@@ -1,3 +1,5 @@
+Here is a list of packages and dependencies considered for this project, and their associated dependencies. See workflow in .devcontainer/devcontainer.json for how to install dependencies.
+
 # iblutil
 
 colorlog>=6.0.0
@@ -95,6 +97,7 @@ imagecodecs  # used to convert tif snapshots to png when registering mesoscope s
 sparse
 seaborn>=0.9.0
 tqdm>=4.32.1
+
 # ibl libraries
 iblatlas>=0.5.3
 ibl-neuropixel>=1.6.2
