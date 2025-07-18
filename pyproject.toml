@@ -107,4 +107,4 @@ testpaths = ["tests"]
 target-version = "py313"
 
 [tool.setuptools]
-packages = ["sortrep"]
+packages = ["replication"]

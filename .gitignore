@@ -25,3 +25,4 @@ __pycache__
 
 # specific files
 proposal.pdf
+papers/*
