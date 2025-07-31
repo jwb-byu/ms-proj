@@ -1,6 +1,24 @@
 import numpy as np
 
 
+def find_outlier_limits(x: list[float]) -> tuple[float, float]:
+    """
+    given a list of floats, find the upper and lower limits that could be considered as outliers
+    an outlier is defined as a value outside 3 standard deviations and 1.5xIQR outside the IQR
+
+    :param x: the distribution
+
+    :return: lower and upper limits respectively
+    """
+    percentiles = np.percentile(x, np.array([25, 75]))
+    iqr = percentiles[1]-percentiles[0]
+    mean = float(np.mean(x))
+    sd = float(np.std(x))
+    upper_limit = max([percentiles[1]+1.5*iqr, mean+(3*sd)])
+    lower_limit = min([percentiles[0]-1.5*iqr, mean-(3*sd)])
+    return lower_limit, upper_limit
+
+
 def cross_correlate(x: np.ndarray, y: np.ndarray) -> int:
     """
     Use the cross-correlation algorithm to determine if x and y share a monosynaptic connection.
@@ -14,29 +32,19 @@ def cross_correlate(x: np.ndarray, y: np.ndarray) -> int:
     :param y: vector representing the spike train of neuron y
 
     :return: a category as follows
-        - -2: y inhibits x
-        - -1: y excites x
-        -  0: no relationship
-        -  1: x excites y
-        -  2: x inhibits y
+        - 1: relationship
+        - 0: no relationship
+    
+    NOTE: many methods exist to identify a statistically-significant peak/dip (Kobayashi, 2025). For simplicity, here we use simple univariate statistics as in `find_outlier_limits`.
     """
-    # validate inputs
     assert isinstance(x, np.ndarray) and isinstance(y, np.ndarray), "x and y must both be of type np.ndarray"
     assert len(x.shape) == 1 and len(y.shape) == 1, "x and y must both be 1-dimensional vectors"
     assert len(x) == len(y), "x and y must have the same length"
 
-    # calculate dot products that would fill a cross-correlogram
-    products = dict()
-    for i in range(1, len(x)+1):
-        products[i] = float(np.dot(x[-i:], y[:i]))
-        products[-i] = float(np.dot(y[-i:], x[:i]))
-
-    # ### TODO...
-        
+    products: list = [float(np.dot(x[-i:], y[:i])) for i in range(1, len(x)+1)]
+    lower_limit, upper_limit = find_outlier_limits(products)
+    outliers = np.sum([1 for x in products if x > upper_limit or x < lower_limit])
     
-
-
-    return 1
-
-if __name__ == "__main__":
-    cross_correlate(np.array([0, 2, 4, 6]), y = np.array([1, 3, 5, 7]))
+    if outliers > 0:
+        return 1
+    return 0
