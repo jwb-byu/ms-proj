@@ -35,7 +35,7 @@ def cross_correlate(x: np.ndarray, y: np.ndarray) -> int:
         - 1: relationship
         - 0: no relationship
     
-    NOTE: many methods exist to identify a statistically-significant peak/dip (Kobayashi, 2025). For simplicity, here we use simple univariate statistics as in `find_outlier_limits`.
+    NOTE: many methods exist to identify a statistically-significant peak/dip. For simplicity, here we use simple univariate statistics as in `find_outlier_limits`. Methods also exist to distinguish directionality of the connection, but we will not include them in scope for our purposes. (Kobayashi, 2025)
     """
     assert isinstance(x, np.ndarray) and isinstance(y, np.ndarray), "x and y must both be of type np.ndarray"
     assert len(x.shape) == 1 and len(y.shape) == 1, "x and y must both be 1-dimensional vectors"
