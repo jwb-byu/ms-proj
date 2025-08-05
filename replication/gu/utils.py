@@ -1,6 +1,9 @@
-from typing import Callable
+from typing import Callable, Optional
 
+import matplotlib.pyplot as plt
+import networkx as nx  # type: ignore
 import numpy as np
+from matplotlib.axes import Axes
 
 
 def adjacency_matrix_from_pairwise(arr: np.ndarray, compare: Callable) -> np.ndarray:
@@ -18,8 +21,38 @@ def adjacency_matrix_from_pairwise(arr: np.ndarray, compare: Callable) -> np.nda
     adj = np.zeros((arr.shape[0], arr.shape[0]), dtype=np.int8)
     for i, _ in enumerate(arr):
         for j in range(i+1, min(i+100, len(arr))):
-            score = compare(arr[i], arr[j])
-            adj[i, j] = score
-            adj[j, i] = score
+            adj[i, j] = compare(arr[i], arr[j])
+            adj[j, i] = compare(arr[j], arr[i])
     
     return adj
+
+
+def show_graph(G: nx.Graph, fig_size: tuple[float, float] = (15, 10), title: Optional[str] = None, layout_fun_: Callable = nx.spring_layout) -> None:
+    """
+    Plot a graph. Adapted from CS 575 class exercises, homeworks, projects
+
+    :param G: the graph
+    :param title: title
+    :param layout_fun_: a layout function. options include:
+        - nx.spring_layout
+        - nx.circular_layout
+        - nx.nx_pydot.pydot_layout
+        - nx.nx_pydot.graphviz_layout
+        - see https://networkx.org/documentation/stable/reference/drawing.html#module-networkx.drawing.layout
+    """
+    node_positions: dict[int, tuple[float,float]] = layout_fun_(G)
+    
+    plt.clf()
+    plt.figure(figsize=fig_size)
+    ax: Axes = plt.gca()
+    
+    if title:
+        ax.set_title(title)
+    
+    nx.draw(G, 
+        node_positions, 
+        node_color = ['y' for node in G.nodes], 
+        with_labels = True, 
+        node_size = 300, 
+        alpha=0.8)
+    plt.show()
