@@ -48,11 +48,18 @@ def show_graph(G: nx.Graph, fig_size: tuple[float, float] = (15, 10), title: Opt
     
     if title:
         ax.set_title(title)
-    
-    nx.draw(G, 
-        node_positions, 
-        node_color = ['y' for node in G.nodes], 
-        with_labels = True, 
-        node_size = 300, 
-        alpha=0.8)
+
+    nx.draw_networkx_nodes(
+        G,
+        node_positions,
+        node_color = ['y' for n in G.nodes], # type: ignore
+        node_size=100,
+        alpha=0.7
+    )
+    nx.draw_networkx_edges(
+        G,
+        node_positions,
+        connectionstyle = "arc3, rad=0.3",
+        arrows = True,
+        arrowstyle="->")
     plt.show()
