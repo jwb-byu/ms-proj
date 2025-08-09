@@ -8,7 +8,6 @@ This project produced the following:
 - [Algorithm Demonstration](https://github.com/jwb-byu/ms-proj/blob/main/replication/replication.ipynb)
     - [Cross Correlation](https://github.com/jwb-byu/ms-proj/blob/main/replication/cc/cc.py)
     - [Transfer Entropy](https://github.com/jwb-byu/ms-proj/blob/main/replication/te/te.py)
-    - [Cross Correlation](https://github.com/jwb-byu/ms-proj/blob/main/replication/cc/cc.py)
 - [Project Report](https://github.com/jwb-byu/ms-proj/blob/main/report/report.pdf)
 - [Project Presentation](https://github.com/jwb-byu/ms-proj/blob/main/presentation/presentation.pdf)
 - [Project Proposal](https://github.com/jwb-byu/ms-proj/blob/main/proposal/drafts/proposal_2025-05-03.pdf)
