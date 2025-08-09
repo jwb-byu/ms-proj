@@ -5,6 +5,7 @@ This is the primary repository for my BYU master's project, "Graph Data Science 
 - [Literature Review](https://github.com/jwb-byu/ms-proj/blob/main/review/review.pdf)
 - [IBL Data Demonstration](https://github.com/jwb-byu/ms-proj/blob/main/data-demo/nsp_data_demo_jwb.ipynb)
 - [Algorithm Demonstration](https://github.com/jwb-byu/ms-proj/blob/main/replication/replication.ipynb)
+- [Project Proposal](https://github.com/jwb-byu/ms-proj/blob/main/proposal/drafts/proposal_2025-05-03.pdf)
 
 This project builds on prior work in CS 575 with Dr. Goodrich:
 - [CS 575 Project 2](https://github.com/jwb-byu/ms-proj/blob/main/prior/proj-2.pdf)

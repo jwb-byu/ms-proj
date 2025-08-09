@@ -36,6 +36,19 @@
   eprint = {https://doi.org/10.1177/1545968314554624},
 }
 
+@article {boussard2023dartsort,
+  author = {Boussard, Julien and Windolf, Charlie and Hurwitz, Cole and Lee, Hyun Dong and Yu, Han and Winter, Olivier and Paninski, Liam},
+  title = {DARTsort: A modular drift tracking spike sorter for high-density multi-electrode probes},
+  elocation-id = {2023.08.11.553023},
+  year = {2023},
+  doi = {10.1101/2023.08.11.553023},
+  publisher = {Cold Spring Harbor Laboratory},
+  abstract = {With the advent of high-density, multi-electrode probes, there has been a renewed interest in developing robust and scalable algorithms for spike sorting. Current spike sorting approaches, however, struggle to deal with noisy recordings and probe motion (drift). Here we introduce a modular and interpretable spike sorting pipeline, DARTsort (Drift Aware Registration and Tracking), that builds upon recent advances in denoising, spike localization, and drift estimation. DARTsort integrates a precise estimate of probe drift over time into a model of the spiking signal. This allows our method to be robust to drift across a variety of probe geometries. We show that our spike sorting algorithm outperforms a current state-of-the-art spike sorting algorithm, Kilosort 2.5, on simulated datasets with different drift types and noise levels. Open-source code can be found at https://github.com/cwindolf/dartsort.Competing Interest StatementThe authors have declared no competing interest.},
+  URL = {https://www.biorxiv.org/content/early/2023/08/14/2023.08.11.553023},
+  eprint = {https://www.biorxiv.org/content/early/2023/08/14/2023.08.11.553023.full.pdf},
+  journal = {bioRxiv}
+}
+
 @article {buccino2020spikeinterface,
   article_type = {journal},
   title = {SpikeInterface, a unified framework for spike sorting},
@@ -68,6 +81,20 @@
   url      = {https://www.nejm.org/doi/full/10.1056/NEJMoa2314132},
   eprint   = {https://www.nejm.org/doi/pdf/10.1056/NEJMoa2314132},
   abstract = { In a man with impaired speech from amyotrophic lateral sclerosis, an intracortical speech neuroprosthesis achieved more than 97\% accuracy in decoding his intended speech and making it audible in his natural voice. }
+}
+
+@article{christie2015sorting,
+  doi = {10.1088/1741-2560/12/1/016009},
+  url = {https://dx.doi.org/10.1088/1741-2560/12/1/016009},
+  year = {2014},
+  month = {12},
+  publisher = {IOP Publishing},
+  volume = {12},
+  number = {1},
+  pages = {016009},
+  author = {Christie, Breanne P and Tat, Derek M and Irwin, Zachary T and Gilja, Vikash and Nuyujukian, Paul and Foster, Justin D and Ryu, Stephen I and Shenoy, Krishna V and Thompson, David E and Chestek, Cynthia A},
+  title = {Comparison of spike sorting and thresholding of voltage waveforms for intracortical brain–machine interface performance},
+  journal = {Journal of Neural Engineering},
 }
 
 @article{dowben1953electrode,
@@ -593,6 +620,39 @@
   abstract = {The ultimate aim of chronic recordings is to sample from the same neuron over days and weeks. However, this goal has been difficult to achieve for large populations of neurons. Steinmetz et al. describe the development and testing of Neuropixels 2.0. This new electrophysiological recording tool is a miniaturized, high-density probe for both acute and long-term experiments combined with sophisticated software algorithms for fully automatic post hoc computational stabilization. The technique also provides a strategy for extending the number of recorded sites beyond the number of available recording channels. In freely moving animals, extremely large numbers of individual neurons could thus be followed and tracked with the same probe for weeks and occasionally months. Science, this issue p. eabf4588 An approach has been developed that allows recording from the same neurons in a freely behaving animal for weeks and months. Measuring the dynamics of neural processing across time scales requires following the spiking of thousands of individual neurons over milliseconds and months. To address this need, we introduce the Neuropixels 2.0 probe together with newly designed analysis algorithms. The probe has more than 5000 sites and is miniaturized to facilitate chronic implants in small mammals and recording during unrestrained behavior. High-quality recordings over long time scales were reliably obtained in mice and rats in six laboratories. Improved site density and arrangement combined with newly created data processing methods enable automatic post hoc correction for brain movements, allowing recording from the same neurons for more than 2 months. These probes and algorithms enable stable recordings from thousands of sites during free behavior, even in small animals such as mice.}
 }
 
+@article {todorova2014sorting,
+  Title = {To sort or not to sort: the impact of spike-sorting on neural decoding performance},
+  Author = {Todorova, Sonia and Sadtler, Patrick and Batista, Aaron and Chase, Steven and Ventura, Valérie},
+  DOI = {10.1088/1741-2560/11/5/056005},
+  Number = {5},
+  Volume = {11},
+  Month = {10},
+  Year = {2014},
+  Journal = {Journal of neural engineering},
+  ISSN = {1741-2560},
+  Pages = {056005},
+  URL = {https://europepmc.org/articles/PMC4454741},
+}
+
+@article{trautmann2019accurate,
+  title        = {Accurate Estimation of Neural Population Dynamics without Spike Sorting},
+  author       = {Trautmann, Eric M. and Stavisky, Sergey D. and Lahiri, Subhaneil and Ames, Katherine C. and Kaufman, Matthew T. and O'Shea, Daniel J. and Vyas, Saurabh and Sun, Xulu and Ryu, Stephen I. and Ganguli, Surya and Shenoy, Krishna V.},
+  journal      = {Neuron},
+  volume       = {103},
+  number       = {2},
+  pages        = {292--308.e4},
+  year         = {2019},
+  month        = {07},
+  doi          = {10.1016/j.neuron.2019.05.003},
+  url          = {https://doi.org/10.1016/j.neuron.2019.05.003},
+  publisher    = {Elsevier},
+  issn         = {0896-6273},
+  pmid         = {31171448},
+  abstract     = {A central goal of systems neuroscience is to relate an organism's neural activity to behavior. Neural population analyses often reduce the data dimensionality to focus on relevant activity patterns. A major hurdle to data analysis is spike sorting, and this problem is growing as the number of recorded neurons increases. Here, we investigate whether spike sorting is necessary to estimate neural population dynamics. The theory of random projections suggests that we can accurately estimate the geometry of low-dimensional manifolds from a small number of linear projections of the data. We recorded data using Neuropixels probes in motor cortex of nonhuman primates and reanalyzed data from three previous studies and found that neural dynamics and scientific conclusions are quite similar using multiunit threshold crossings rather than sorted neurons. This finding unlocks existing data for new analyses and informs the design and use of new electrode arrays for laboratory and clinical use.},
+  keywords     = {brain computer interface, dimensionality reduction, neural dynamics, neural implant, neural signal processing, neural trajectories, neurophysiology, random projections, spike sorting},
+  note         = {Copyright © 2019 Elsevier Inc. All rights reserved.}
+}
+
 @article{varadi2024alphafolddb,
   author    = {Mihaly Varadi and Damian Bertoni and Paulyna Magana and Urmila Paramval and Ivanna Pidruchna and Malarvizhi Radhakrishnan and Maxim Tsenkov and Sreenath Nair and Milot Mirdita and Jingi Yeo and Oleg Kovalevskiy and Kathryn Tunyasuvunakool and Agata Laydon and Augustin Žídek and Hamish Tomlinson and Dhavanthi Hariharan and Josh Abrahamson and Tim Green and John Jumper and Ewan Birney and Martin Steinegger and Demis Hassabis and Sameer Velankar},
   title     = {AlphaFold Protein Structure Database in 2024: providing structure coverage for over 214 million protein sequences},
@@ -610,6 +670,19 @@
   abstract  = {The AlphaFold Database Protein Structure Database (AlphaFold DB, https://alphafold.ebi.ac.uk) has significantly impacted structural biology by amassing over 214 million predicted protein structures, expanding from the initial 300k structures released in 2021. Enabled by the groundbreaking AlphaFold2 artificial intelligence (AI) system, the predictions archived in AlphaFold DB have been integrated into primary data resources such as PDB, UniProt, Ensembl, InterPro and MobiDB. Our manuscript details subsequent enhancements in data archiving, covering successive releases encompassing model organisms, global health proteomes, Swiss-Prot integration, and a host of curated protein datasets. We detail the data access mechanisms of AlphaFold DB, from direct file access via FTP to advanced queries using Google Cloud Public Datasets and the programmatic access endpoints of the database. We also discuss the improvements and services added since its initial release, including enhancements to the Predicted Aligned Error viewer, customisation options for the 3D viewer, and improvements in the search engine of AlphaFold DB.},
   publisher = {Oxford University Press},
   note      = {Published on behalf of Nucleic Acids Research}
+}
+
+@article{vareberg2024wisconsinbins,
+  title = {Inference of network connectivity from temporally binned spike trains},
+  journal = {Journal of Neuroscience Methods},
+  volume = {404},
+  pages = {110073},
+  year = {2024},
+  issn = {0165-0270},
+  doi = {https://doi.org/10.1016/j.jneumeth.2024.110073},
+  url = {https://www.sciencedirect.com/science/article/pii/S0165027024000189},
+  author = {Adam D. Vareberg and Ilhan Bok and Jenna Eizadi and Xiaoxuan Ren and Aviad Hai},
+  keywords = {Synaptic connectivity, Temporal bins, Neural network reconstruction}
 }
 
 @article{vaswani2023attentionneed,
