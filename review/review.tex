@@ -1,5 +1,6 @@
 % setup
 \documentclass[11pt]{article}
+\usepackage{amsmath}
 \usepackage[style=ieee,sorting=none]{biblatex}
 \usepackage{etoolbox}
 \usepackage{fancyhdr} % For custom headers/footers
@@ -79,50 +80,34 @@ As the scope and scale of electrophysiology recording of the brain increases, de
 % NSP goals, AP/LFP identification
 Regardless of scale, the primary output of electrophysiological recording is a set of voltages, each associated with a time and a recording channel/site. Values are typically organized into a matrix with rows corresponding to channels and columns corresponding to timepoints. With hundreds of channels and thousands of timepoints per second, these matrices can become quite large, so they are often visualized as a heatmap (e.g., \cite[Fig.~1A]{pachitariu2016kilosort}). Initial processing of raw voltage data typically includes separation of the signal by wavelength with a high-pass filter to differentiate local field potential (LFP) voltages resulting from the local environment from action-potential (AP) voltages that correspond to neural firing. This step is often handled on-device for modern electrode technologies \cite{jun2017probes}. Next, AP values are often cleaned with transformations such as common average referencing and spatial whitening to resolve artifacts, noise, and movement of electrodes during recording \cite{pachitariu2016kilosort, pachitariu2024kilosort4}.
 
-% A typical spike sorting pipeline
-AP voltage data has been used directly in machine learning models to predict intended behavior (e.g., \cite{musk2019integrated}). While this is appropriate for applications such as BCIs, where fast input/output is needed \cite{todorova2014sorting, christie2015sorting, trautmann2019accurate}, additional spike sorting is required to identify discrete spikes in the action potential signals and cluster them into spike trains, where each cluster's spike train includes the spike times associated with a putative neuron. While many spike sorting algorithms exist and vary by complexity \cite{jog2002tetrode, pachitariu2016kilosort, boussard2023dartsort}, we will consider the conceptual details of steps in one prototypical algorithm that has proven ideal for large datasets, known as KiloSort \cite{pachitariu2016kilosort, pachitariu2024kilosort4}. In the KiloSort algorithm, AP voltage spikes are identified based on shifting values in adjacent spatiotemporal measurements (e.g., adjacent rows and columns in the AP space-by-time matrix). These adjacent measurements are vectorized and grouped by similarity via template deconvolution and clustering. Multiple iterations of template deconvolution and clustering have been implemented since 2016, with improvements including capacity for spikes to be split or merged in scenarios such as spike overlap \cite{pachitariu2016kilosort,pachitariu2024kilosort4}. The KiloSort algorithm has been used for spike sorting in a large animal model dataset collected over several years \cite{ibl2022datarelease, ibl2022iblsorter} and featured in a standardized library of leading spike sorting algorithms \cite{buccino2020spikeinterface}. As spike sorting processes continue to improve, precise identification of neurons and their spiking times will then enable spike train analysis (described next) to identify and analyze neuronal network dynamics in-vivo.
+% Spike sorting
+AP voltage data is often processed with an additional spike sorting algorithm to identify discrete spikes in the action potential signals and sort them into clusters, where each cluster is assigned spike times associated with a putative neuron. The spike times can be temporally binned into a binary vector known as a "spike train". Many spike sorting algorithms exist and vary by complexity \cite{jog2002tetrode, pachitariu2016kilosort, boussard2023dartsort}. For example, in some cases applications such as BCI's where fast input/output is required, spikes may identified, but not sorted into clusters \cite{musk2019integrated, todorova2014sorting, christie2015sorting, trautmann2019accurate}.
+
+% KiloSort
+A prototypical example spike sorting algorithm is KiloSort \cite{pachitariu2016kilosort, pachitariu2024kilosort4}. In the KiloSort algorithm, AP voltage spikes are identified based on shifting values in adjacent spatiotemporal measurements (e.g., adjacent rows and columns in the AP space-by-time matrix). These adjacent measurements are vectorized and grouped by similarity via template deconvolution and clustering. Multiple iterations of template deconvolution and clustering have been implemented since 2016, with improvements including capacity for spikes to be split or merged in scenarios such as spike overlap \cite{pachitariu2016kilosort,pachitariu2024kilosort4}. The KiloSort algorithm has been used for spike sorting in an animal model dataset collected over several years \cite{ibl2022datarelease, ibl2022iblsorter} and featured in a standardized library of leading spike sorting algorithms \cite{buccino2020spikeinterface}. As spike sorting algorithms continue to improve, precise identification of neurons and their spiking times will refine spike train analysis (described next) to enable analysis of neuronal network dynamics in-vivo and at scale.
 
 \subsectionwithindent{Spike Train Analysis Produces Functional Connectomes}
-% Intro
+% Overview
+Using electrophysiology to identify discrete neurons and spiking events together with associated spatial positions in the brain may be the best way to gather high-resolution neural activity data for in-vivo research with animal models and clinical application to humans. Discrete spike data can be analyzed for insights into the network structure and dynamics underlying the activity. Recent work has applied modern ANN models to establish graph structure of a partial functional connectome (e.g., Vareberg et al. \cite{vareberg2024wisconsinbins}), or to embed latent states of the network (e.g., latent factor analysis via dynamical systems, LFADS \cite{pandarinath2018autoencoders, keshtkaran2022large}; Neural Encoding and Decoding at Scale, NEDS \cite{zhang2025neds}). Other approaches for system-level analysis have included Bayesian, state-space, and linear system modeling \cite{brown1998statistical, paninski2010new, geadah2025modeling}. Additionally, generalized linear models have been used to predict firing rate at the neuron-level \cite{paninski2004mle, kobayashi2025connections}. Here, we will consider two simpler algorithms, cross-correlation and transfer entropy, to build an initial intuition for more modern spike-train analyses.
 
-% Cross correlation
-% perkel1967crosscor, moore1970crosscor, kobayashi2025connections
+% Cross-correlation
+Cross-correlation was one of the first spike train analysis algorithms to be developed \cite{perkel1967crosscor}. This algorithm involves taking a sliding dot product based on the two spike trains (e.g., dot product of the last timepoint of train A and first timepoint of b, dot product of the last two timepoints of train A and first two timepoints of B). The sliding dot product produces a distribution that can be visualized as a histogram, termed a "cross-correlogram". If a peak or dip is found in the distribution by visualizing the histogram or by algorithmically identifying outliers, a synaptic connection is inferred. The amount and direction of offset of the spike trains can also be used to infer directionality of the synapse \cite{perkel1967crosscor, moore1970crosscor, kobayashi2025connections}.
 
-% Transfer Entropy, Granger Causality
-% kobayashi2025connections
-
-
+% Transfer Entropy
+Within a few years of the publication of cross-correlation in the 1960's, Granger causality was also developed and published \cite{granger1969causality}. Granger causality was originally developed for economics, but provided a generalizable method for infering relationships between time series. Decades later, transfer entropy was developed in the context of information theory, and offered a mathematically-related, non-parametric method similar to Granger causality \cite{schreiber2000te}. Here we include the definition of transfer entropy in equation~\eqref{eq:te}, adapted from \cite[Eq.~4]{schreiber2000te}.
 
 \begin{equation}
     T_{X \to Y} = \sum_{y_t,\, y_h,\, x_h}
     p(y_t, y_h, x_h)
     \log_{2} \frac{p(y_t \mid y_h, x_h)}{p(y_t \mid y_h)}
+    \label{eq:te}
 \end{equation}
 
-
-\begin{equation}
-    L \propto \log N
-\end{equation}
-
-
-
-
-
-
-
-% modeling: GLM, CLDS
-
-% Next generation, association with behavior: autoLFADS, NEDS
-% pandarinath2018autoencoders, keshtkaran2022large, zhang2025neds, vareberg2024wisconsinbins
-
-
-
-
-% tons of algorithms exist (cite a bunch. Ranging from wisconsin-madison binning to autoencoders to GLM.)
-
+Transfer entropy adds directionality to a previous metric in information theory, mutual information \cite{schreiber2000te}. When applied to spike train analysis, transfer entropy quantifies the amount of firing from neuron $Y$ that is attributable to neuron $X$ \cite{schreiber2000te, kobayashi2025connections}.
 
 \subsectionwithindent{Conclusion}
-% briefly mention that we're done talking through details. The big picture is that 20 years from now I anticipate a revolution in medical devices and understanding of neural circutry to be beyond stopping, and similar in scope and size and hype to the modern AI boom. And it will all be powered by data science.
+% Conclusion
+This review considered foundations and recent advances in connectomics, neural electrophysiology, neural signal processing, and spike train analysis. The combination of knowledge and methods in these subfields is prime example of how modern data science and machine learning methods are accelerating achievements in other domains. As these subfields and their methods continue to develop, it is likely that they will lay a foundation for improving humankind's understanding of the distributed processing in our brains and offer promising therapies for treatment-resistant neurological and psychiatric diseases along the way.
 
 \newpage
 \printbibliography
