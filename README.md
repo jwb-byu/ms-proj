@@ -3,13 +3,14 @@ This is the primary repository for my BYU master's project, "Graph Data Science 
 
 ## Deliverables
 This project produced the following:
+- [Project Presentation](https://github.com/jwb-byu/ms-proj/blob/main/presentation/presentation.mp4)
+- [Project Presentation Slides](https://github.com/jwb-byu/ms-proj/blob/main/presentation/presentation.pdf)
 - [Literature Review](https://github.com/jwb-byu/ms-proj/blob/main/review/review.pdf)
 - [IBL Data Demonstration](https://github.com/jwb-byu/ms-proj/blob/main/data-demo/nsp_data_demo_jwb.ipynb)
 - [Algorithm Demonstration](https://github.com/jwb-byu/ms-proj/blob/main/replication/replication.ipynb)
     - [Cross Correlation](https://github.com/jwb-byu/ms-proj/blob/main/replication/cc/cc.py)
     - [Transfer Entropy](https://github.com/jwb-byu/ms-proj/blob/main/replication/te/te.py)
 - [Project Report](https://github.com/jwb-byu/ms-proj/blob/main/report/report.pdf)
-- [Project Presentation](https://github.com/jwb-byu/ms-proj/blob/main/presentation/presentation.pdf)
 - [Project Proposal](https://github.com/jwb-byu/ms-proj/blob/main/proposal/drafts/proposal_2025-05-03.pdf)
 
 ## Prior Work
